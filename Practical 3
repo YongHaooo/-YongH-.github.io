@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Tables</title>
+  </head>
+<body>
+  <table border="1" cellspacing = "0" cellpadding = "5">
+      <tr>
+          <th rowspan="3">Cana Island Lighthouse</th>
+          <td>Built: 1869</td>
+      </tr>
+      <tr>
+          <td>Automated: 1944</td>
+      </tr>
+      <tr>
+          <td>Tower Height: 65 feet</td>
+      </tr>
+  </table>
+  </body>
+</html>
