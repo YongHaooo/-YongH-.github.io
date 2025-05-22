@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+ <head>
+   <title>Registeration.html</title>
+ </head>
+<body>
+   <h1>Registeration Form</h1>
+   <form action="Registeration.html">
+      <table>
+      <tbody>
+         <tr>
+            <td>
+               <label for ="firstname">
+                  First Name </label>
+            </td>
+            <td>
+            <input type="text" name =
+               "FirstName" id ="firstName" />
+            </td>
+         </tr>
+         <tr>
+            <td>
+               <label for="lastName">
+                  Last Name </label>
+            </td>
+            <td>
+            <input type="text" name="LastName" id="lastName" />
+            </td>
+         </tr>
+         <tr>
+             <td>Gender</td>
+            <td>
+               <input type="radio" name="gender" id="male" />
+               <label for="male">Male</label>
+
+               <input type="radio" name="gender" id="female" />
+               <label for="male">Female</label>
+            </td>
+         </tr>
+         <!-- Password -->
+         <tr>
+         <td>
+            <label for="password">Password</label>
+         </td>
+         <td>
+            <input type="password" name="password" id="password" />
+         </td>
+         </tr>
+         <!-- Confirm Password -->
+         <tr>
+         <td>
+            <label for="confirmpassword">Confirm Password</label>
+         </td>
+         <td>
+            <input type="password" name="confirmpassword" id="confirmpassword" />
+         </td>
+         </tr>
+         <tr>
+            <td>Interests</td>
+         <td>
+            <input type="checkbox" name="interests" id="sports" />
+            <label for="sports">Sports</label>
+            <input type="checkbox" name="interests" id="music" />
+            <label for="music">Music</label>
+            <input type="checkbox" name="interests" id="movies" />
+            <label for="movies">Movies</label>
+            <br />
+            <input type="checkbox" name="interests" id="food" />
+            <label for="food">Food</label>
+            <input type="checkbox" name="interests" id="travel" />
+            <label for="travel">Travel</label>
+            <input type="checkbox" name="interests" id="adventure" />
+            <label for="adventure">Adventure</label>
+         </td>
+         </tr>
+         <tr>
+            <td>
+               <label for ="Region">Region</label>
+            </td>
+            <td>
+               <select id="Region">
+                  <option value="north">North</option>
+                  <option value="south">South</option>
+                  <option value="east">East</option>
+                  <option value="west">West</option>
+                  <option value="central">Central</option>
+               </select>
+            </td>
+            </tr>
+         <tr>
+            <td>
+               <label for ="comments">Comments</label>
+            </td>
+            <td>
+               <textarea rows="5" cols="30" id="comments"></textarea>
+            </td>
+         </tr>
+         <td></td>
+         <td>
+            <input type="submit" value="Register" />
+            <input type="reset" value="Reset" />
+         </td>
+      </tbody>
+      </table>
+      </form>
+</body>
+</html>
