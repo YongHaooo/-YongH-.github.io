@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+ <head>
+   <title>Register.html</title>
+  </head>
+   <body class="light"> </body>
+   <style>
+      #light {
+      background-color: hotpink;
+      
+      }
+      .label {
+         font-weight: bold;
+      }
+   </style>
+<body id="light"> 
+   <form name="input" action="processform.html" method="get">
+      <label for="modulecode"></label>
+   Username:<input type="text" name="user"/>
+   <input type="submit" value="Submit"/>
+   <br>
+      Email:<input type="text" name="user"/>
+      <input type="submit" value="Submit"/>
+   <br />
+      Password:<input type="text" name="user"/>
+      <input type="submit" value="Submit"/>
+   </form>
+   <form>
+     Module Code:
+     <input type="text" name="moduleCode" />
+   <br>
+      <form action = process.html>
+     School:
+     <input type="radio" name="school" value="SIT" id="SIT" />
+     <label for="SIT" class="label" >SIT</label>
+
+          <input type="radio" name="school" value="SBM" id="SBM" />
+           <label for = "SBM">SBM</label>
+
+          <input type="radio" name="school" value="SEG" id="SEG" />
+           <label for = "SEG">SEG</label>
+
+          <input type="radio" name="school" value="SDN" id="SDN" />
+           <label for = "SIT">SDN</label>
+   </br>
+   Are you a monkey?
+   <br>
+      <input type="checkbox" name="Fulltimediploma" />
+      <label style="font-weight: bold;">Yes i am a monkey! </label>
+      <input type="checkbox" name="Notfulltimediploma" /> Not monkey
+        </br>
+   <br>
+    Lesson Day:
+      <select name="lessonday">
+      <option> Monday</option>
+      <option> Tuesday</option>
+      <option> Wednesday</option>
+      <option> Thursday</option>
+      <option> Friday</option>
+      </select>
+      <br />
+      <br />
+      <input type="submit" value="Save"
+      tabindex= 1 /> &nbsp; &nbsp; &nbsp;
+      <input type="reset" value="Reset"
+      tabindex= 2 />
+   </form>
+</body>
+</html>
