@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+ <head>
+   <title>CSS</title>
+   <style>
+      h1 {
+         color: hotpink;
+      
+      }
+      .heading {
+         colour: blue;
+      }
+      #heading {
+         colour: yellow;
+      }
+   </style>
+<h1 style="color: purple" id="heading" class="heading"></h1>
+<body>
+   <h1>CSS</h1>
+   <table border="1">
+     <caption>List of Items</caption>
+     <thead><tr>
+       <th>Item No</th>
+       <th>Description</th>
+       <th>Amt</th>
+     </tr></thead>
+     <tbody>
+     <tr class="odd">
+       <td>1</td><td>item 1</td><td>12.80</td>
+     </tr>
+     <tr class="even">
+       <td>2</td><td>item 2</td><td>12.80</td>
+     </tr>
+     <tr class="odd">
+       <td>3</td><td>item 3</td><td>&nbsp;</td>
+     </tr>
+     </tbody>
+     <tfoot><tr>
+       <th colspan="2">total</th><th>100.00</th>
+     </tr></tfoot>  
+   </table>
+</body>
+</head>
+</html>
