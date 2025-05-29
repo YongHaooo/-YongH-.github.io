@@ -15,11 +15,18 @@
       background-color: #e6e6fa;
       color: #191970;
     }
+    .nav {
+      font-size: 1.25em ;
+      font-weight: bold;
+    }
+    .feature {
+      color:#FF0000;
+    }
   </style>
   </head>
   <body>
     <h1>Trillium Media Design</h1>
-    <div>
+    <div class="nav">
       <a href="index.html">Home</a> <a href="services.html">Services</a> <a href="contact.html">Contact</a>
     </div>
     <h2>New Media and Web Design</h2>
@@ -31,16 +38,14 @@
       <li>Website Design</li>
       <li>Interactive Animation</li>
       <li>E-Commerce Solutions</li>  	
-      <li>Usability Studies</li>
-      <li>Search Engine Optimization</li>
+      <li class="feature">Usability Studies</li>
+      <li class="feature">Search Engine Optimization</li>
     </ul>
     <h2>Meeting Your Business Needs</h2>
     <p>
       Our expert designers are creative and eager to work with you.<br> 
       Take advantage of the power of Web 2.0!
     </p>
-    <div>Copyright © 2013 Your Name Here</div>
-
-
+    <div id="footer" >Copyright &copy; 2013 Your Name Here</div>
 </body>
 </html>
