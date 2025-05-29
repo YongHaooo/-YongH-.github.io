@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+  
+  <html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+    <title> Style a Table using CSS</title>
+      <link href="table.css" rel="stylesheet"/>
+  </head>
+  <body>
+    <!-- this line will not be displayed as it is within the comment tag -->
+    <div>
+      <h1>TimeTable</h1>
+      <table border="1">
+        <caption>My Timetable</caption>
+        <tbody><tr>
+          <th>&nbsp;</th>
+          <th>Mon</th>
+          <th>Tue</th>
+          <th>Wed</th>
+          <th>Thu</th>
+          <th>Fri</th>
+        </tr>
+        <tr>
+          <th>9:00am-<br>9:50am</th>
+          <td rowspan="2" <td class="practical">IT1564 practical</td>
+          <td>&nbsp;</td>
+          <td class="tutorial">IT1506 Tutorial</td>
+          <td rowspan="2" <td class="practical">IT1505 practical</td>
+          <td>&nbsp;</td>
+        </tr>
+        <tr>
+          <th>10:00am-<br>10:50am</th>
+          <td class="tutorial">   IT1564 Tutorial</td>
+          <td rowspan="2"<td class="practical">IT1506 Practical</td>
+          <td class="lecture">IT1506 Lecture</td>
+        </tr>
+        <tr>
+          <th>11:00am-<br>11:50am</th>
+          <td class="lecture">IT1505 Lecture</td> 
+          <td>&nbsp;</td>
+          <td colspan="2">No lesson</td>				
+        </tr>
+      </tbody></table>
+    </div>
+
+
+  </body></html>
+</html>
