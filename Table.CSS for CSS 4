@@ -1,0 +1,29 @@
+table { 
+font-family:"comic sans ms"; 
+border-collapse:collapse; 
+width:75%; 
+}
+
+table.center {
+Margin-left: auto;
+}
+
+th {
+background-color: #777;
+color: #0f0;
+border: 2px #0ff solid;
+}
+
+td.tutorial {
+background-color: #cbcbcb;
+}
+td.practical {
+  background-color: #666;
+}
+td.lecture {
+  background-color: #888;
+}
+td.practical
+{
+background-color: #666666
+}
