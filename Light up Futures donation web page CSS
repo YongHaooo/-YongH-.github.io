@@ -1,0 +1,615 @@
+/* Applies to every element on the page: 
+ Removes default spacing and ensures padding/border don't add extra size */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Sets default font to Arial, makes page background black, and text white */
+body {
+  font-family: Arial;
+  background: #000000;
+  color: #ffffff;
+}
+
+/* Header layout with two parts logo and company name and side by side using grid */
+.container {
+  display: grid;
+  grid-template-areas: "logo company";
+  grid-template-columns: 1fr 3fr;
+  gap: 20px;
+  align-items: center;
+  padding: 20px;
+}
+
+/* Logo section on the left logo is centered and spaced */
+.logo-section {
+  grid-area: logo;
+  padding: 30px;
+  text-align: center;
+}
+
+.logo-text {
+  font-size: 2em;
+  font-weight: bold;
+}
+
+/* Company name section on the right company name is centered and spaced */
+.company-name {
+  grid-area: company;
+  padding: 30px;
+  text-align: center;
+}
+
+/* Company name title with larger size and regular weight */
+.company-name h1 {
+  font-size: 2.5em;
+  font-weight: normal;
+}
+
+/* Navigation bar black background, padding, white border and shadow.
+ Stays fixed at the top when you scroll. Uses flexbox for spacing. */
+.navbar {
+  background-color: #000000;
+  padding: 15px;
+  text-align: center;
+  border-bottom: 1px solid #ffffff;
+  box-shadow: 0 2px 4px rgba(255,255,255,0.2);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+/* Styles each navigation link removes underline, sets color, spacing, and hover effect */
+.navbar a {
+  text-decoration: none;
+  color: #ffffff;
+  margin: 0 15px;
+  font-size: 16px;
+  padding: 10px 15px;
+  border-radius: 5px;
+  transition: background-color 0.3s, transform 0.2s;
+  display: inline-block;
+}
+
+/* On hover link background turns yellow, text turns black, moves up slightly */
+.navbar a:hover {
+  background: #ffff00;
+  color: #000000;
+  transform: translateY(-2px);
+}
+
+/* background image section takes full screen height, centered text, background image */
+.bgimg {
+  position: relative;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  overflow: hidden;
+  background-image: url('https://i.guim.co.uk/img/media/9b145dc4c313a00c7ba91794df14fcab37839f04/0_374_5613_3368/master/5613.jpg?width=1200&height=900&quality=85&auto=format&fit=crop&s=75d612a98f5fb3c243fa11ceb235ee2b');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+/* Adds a dark overlay on top of the image to help text stand out */
+.bgimg::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.25);
+  z-index: 0;
+}
+
+/* Content box in hero section: appears above overlay, with dark background and padding */
+.hero-content {
+  z-index: 1;
+  color: #ffffff;
+  padding: 2rem;
+  background: rgba(0,0,0,0.9);
+}
+
+.hero-content h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.hero-content p {
+  font-size: 1.2rem;
+  margin-bottom: 1.5rem;
+}
+
+/* Call-to-action button: yellow with black text, rounded, and smooth hover effect */
+.cta-button {
+  display: inline-block;
+  padding: 0.75rem 1.5rem;
+  background: #ffff00;
+  color: #000000;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: background-color 0.3s;
+  scroll-behavior: smooth;
+  font-weight: bold;
+}
+
+/* Changes background to a slightly darker yellow on hover. */
+.cta-button:hover {
+  background: #cccc00;
+}
+
+/* Adds space around each section and the footer */
+section, footer {
+  padding: 2rem;
+}
+
+/* Create a Grid layout styling for multiple content boxes like stats, initiatives, etc. */
+/* Enables grid layout with spacing between items. */
+/* Creates a responsive grid. Adjusts automatically based on screen size*/
+/* Adds top margin. */
+.stats-grid, .initiatives-grid, .donation-cards, .stories-grid {
+  display: grid;
+  gap: 1.5rem;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  margin-top: 2rem;
+}
+
+/* Styles applied to individual cards in these grids. */
+/* White border, padding, rounded corners, dark gray background, and white text. */
+.stat-card, .initiative-card, .donation-card, .story-card {
+  border: 1px solid #ffffff;
+  padding: 1rem;
+  border-radius: 5px;
+  background: #111111;
+  color: #ffffff;
+}
+
+.stat-number {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #ffff00;
+}
+
+.initiative-icon {
+  font-size: 2rem;
+}
+
+/* General styling for heading2 . */
+h2 {
+  margin-bottom: 1rem;
+  font-size: 1.5rem;
+  color: #ffff00;
+}
+
+/* Styles for the donate buttons. */
+/* Yellow background, black text, no border, and a pointer cursor on hover. */
+/* Rounded corners, smooth transition, bold text. */
+.donate-btn {
+  margin-top: 1rem;
+  padding: 0.5rem 1rem;
+  background: #ffff00;
+  color: #000000;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: background-color 0.3s;
+  font-weight: bold;
+}
+
+/* Changes background to a slightly darker yellow on hover. */
+.donate-btn:hover {
+  background: #cccc00;
+}
+
+/* Styles specific to the "Light Up Kits" preview section. */
+/* More generous padding, black background, white text. */
+/* Centers the content within the section and limits its maximum width. */
+.lightup-preview {
+  padding: 6rem 2rem;
+  background: #000000;
+  color: #ffffff;
+}
+
+.lightup-preview > div {
+  max-width: 1000px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.lightup-preview h2 {
+  font-size: 2.8rem;
+  margin-bottom: 1rem;
+}
+
+.lightup-preview p {
+  font-size: 1.2rem;
+  max-width: 800px;
+  margin: 0 auto 3rem;
+}
+
+/* Grid layout for product features make it so it fits different screen sizes. */
+.features-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 2rem;
+  margin-bottom: 3rem;
+}
+
+.feature-item {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.feature-item span:first-child {
+  font-size: 1.5rem;
+}
+
+/* Uses Flexbox to arrange impact stats, centering items and allowing wrapping. */
+.impact-stats {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 2rem;
+}
+
+.impact-stat {
+  text-align: center;
+}
+
+.impact-stat strong {
+  font-size: 2rem;
+  color: #ffff00;
+  text-shadow: 1px 1px 2px rgba(0,0,0,0.8);
+}
+
+/* The footer of the page small white text, top border. */
+footer {
+  text-align: center;
+  font-size: 0.9rem;
+  border-top: 1px solid #ffffff;
+  margin-top: 2rem;
+  background: #000000;
+  color: #ffffff;
+}
+
+/* Styles for the custom donation input field full width, dark background, white text. */
+#customAmount {
+  width: 100%;
+  padding: 0.8rem;
+  border-radius: 8px;
+  border: 1px solid #ffffff;
+  background: #000000;
+  color: #ffffff;
+  margin-bottom: 1rem;
+  font-size: 1rem;
+}
+
+#customAmount::placeholder {
+  color: #cccccc;
+}
+
+/* New Product Showcase styles */
+/* Styles for the detailed display of the "Light Up Kit V2". */
+.product-showcase {
+    margin-top: 4rem;
+    padding: 2rem;
+    background: #000000;
+    border-radius: 10px;
+    border: 1px solid #000000;
+}
+
+.product-showcase h3 {
+    color: #ffff00;
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    text-align: center;
+}
+
+/* Uses Flexbox to arrange the image and description side-by-side, wrapping on smaller screens, and centering items. */
+.product-details {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Styles for the product image container. */
+.product-image {
+    flex: 1;
+    min-width: 300px;
+    text-align: center;
+}
+
+/* Styles for the product image itself. */
+.product-image img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(255,255,0,0.3);
+}
+
+/* Styles for the product description text. */
+.product-description {
+    flex: 1;
+    min-width: 300px;
+    text-align: left;
+}
+
+.product-description h4 {
+    color: #ffff00;
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+/* Styles for the unordered list within the product description. */
+.product-description ul {
+    color: #ffffff;
+    font-size: 1.1rem;
+    line-height: 1.8;
+    margin-bottom: 1.5rem;
+    /* Remove default bullet points. */
+    list-style: none;
+    /* Remove default padding. */
+    padding-left: 0;
+}
+
+.product-description ul li {
+    margin-bottom: 0.5rem;
+}
+
+/* Styles for the general description text about the kit. */
+.product-description .kit-description {
+    color: #cccccc;
+    font-size: 1rem;
+    line-height: 1.6;
+    margin-bottom: 1rem;
+}
+
+/* Styles for the "Impact per Kit" highlighted box. */
+.impact-per-kit {
+    background: #111111;
+    padding: 1rem;
+    border-radius: 5px;
+    border-left: 4px solid #ffff00;
+}
+
+.impact-per-kit strong {
+    color: #ffff00;
+}
+
+.impact-per-kit p {
+    color: #ffffff;
+    margin-top: 0.5rem;
+}
+
+/* Urgent Call Section styles */
+/* Styles for the section highlighting urgent needs. */
+.urgent-call {
+    background: #000000;
+    color: #ffff00;
+    padding: 4rem 2rem;
+    text-align: center;
+}
+
+/* Centers content within the urgent call section and limits its width. */
+.urgent-call > div {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.urgent-call h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
+    font-weight: bold;
+}
+
+.urgent-call p {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+    line-height: 1.6;
+}
+
+.urgent-call div h3 {
+    font-size: 1.4rem;
+    margin-bottom: 1rem;
+    color: #ffff00;
+}
+
+/* Styles for lists within the urgent call section, removing default bullets. */
+.urgent-call ul {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    margin-bottom: 1.5rem;
+    list-style: none;
+    padding-left: 0;
+}
+
+.urgent-call ul li {
+    margin-bottom: 0.5rem;
+}
+
+/* Styles for nested lists within the urgent call section. */
+.urgent-call ul ul {
+    margin-left: 1.5rem;
+    margin-top: 0.5rem;
+}
+
+/* Success Stories Section CSS */
+/* Styles for the testimonials section. */
+.success-stories {
+    padding: 4rem 2rem;
+    background-color: #000000;
+    color: #ffffff;
+    text-align: center;
+    font-family: "Inter", sans-serif;
+}
+
+.success-stories h2 {
+    font-size: 2.25rem;
+    color: #ffff00;
+    margin-bottom: 2rem;
+    font-weight: 700;
+}
+
+.success-stories .intro-paragraph {
+    font-size: 1.25rem;
+    /* Changed from gray-300 to white to match overall theme. */
+    color: #ffffff;
+    margin-bottom: 3rem;
+    max-width: 48rem;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Styles for the grid containing individual story cards. */
+.stories-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+    max-width: 80rem;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Styles for individual story testimonial cards. */
+.story-card {
+    border: 1px solid #ffffff;
+    padding: 1.5rem;
+    border-radius: 0.5rem;
+    background-color: #000000;
+    color: #ffffff;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+}
+
+/* Centers the profile image within its container. */
+.story-card .profile-image-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 1rem;
+}
+
+/* Styles for the circular profile images. */
+.story-card img {
+    border-radius: 9999px; /* Makes it a perfect circle */
+    width: 5rem;
+    height: 5rem;
+    object-fit: cover; /* Ensures the image covers the area without distortion */
+    border: 2px solid #fbbf24;
+}
+
+.story-card p {
+    font-size: 1.125rem;
+    margin-bottom: 1rem;
+}
+
+.story-card strong {
+    color: #ffff00;
+}
+
+.story-card span {
+    font-size: 0.875rem;
+    color: #9ca3af;
+}
+
+/* Styles for the "Share Your Story" section. */
+.share-story-section {
+    margin-top: 4rem;
+}
+
+.share-story-section h3 {
+    font-size: 1.875rem;
+    color: #ffff00;
+    margin-bottom: 1.5rem;
+    font-weight: 700;
+}
+
+.share-story-section .share-paragraph {
+    font-size: 1.125rem;
+    color: #d1d5db;
+    margin-bottom: 2rem;
+    max-width: 42rem;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Styles for the "Share Your Story" button. */
+.share-story-button {
+    display: inline-block;
+    padding: 0.75rem 2rem;
+    background-color: #ffff00;
+    color: #000000;
+    font-weight: 700;
+    border-radius: 9999px;
+    font-size: 1.125rem;
+    text-decoration: none;
+    transition-property: all;
+    transition-duration: 300ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Hover effect for the share story button. */
+.share-story-button:hover {
+    background-color: #cccc00;
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+}
+
+/* Media Queries: These rules define how the layout and styles change based on screen sizes, ensuring responsive design. */
+/* Styles for screens up to 768px wide (e.g., mobile devices). */
+@media (max-width: 768px) {
+  /* Stacks logo and company name vertically. */
+  .container {
+    grid-template-areas: "logo" "company";
+    grid-template-columns: 1fr;
+  }
+
+  /* Adjusts navbar link display for smaller screens. */
+  .navbar a {
+    display: inline-block;
+    margin: 5px 10px;
+  }
+
+  /* Reduces font size of hero heading. */
+  .hero-content h1 {
+    font-size: 2rem;
+  }
+
+  /* Reduces font size of hero paragraph. */
+  .hero-content p {
+    font-size: 1rem;
+  }
+
+  /* Displays story cards in a single column on small screens. */
+  .stories-grid {
+      grid-template-columns: repeat(1, minmax(0, 1fr));
+  }
+}
+
+/* Styles for screens 768px wide and up like tablets. */
+@media (min-width: 768px) {
+    /* Displays story cards in two columns. */
+    .stories-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+/* Styles for wide screens and up for desktops. */
+@media (min-width: 1024px) {
+    /* Displays story cards in three columns. */
+    .stories-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+/* AI Acknowledgement:
+The overall theme, general layout and text of this website were fully created by me. AI tools such as openai chatgpt and google gemini were used to assist with specific elements, such as refining CSS styling, improving responsive design, and some parts of javascript. All final design decisions and customizations were done independently. I also referred to W3Schools.com as a learning resource for HTML and CSS as I wanted to add elements that are not taught in class like grids, hero/backgroundimg , box shadow and rem in order for me to make a better website. */
