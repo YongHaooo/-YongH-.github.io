@@ -1,32 +1,129 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
- <title>YongH's website</title>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Home - Light Up Futures</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
 
 <body>
-  <h1>Welcome to YongH's website</h1>
-  <img src="https://freerangestock.com/sample/120140/business-man-profile-vector.jpg" width=240 alt="Profile image" />
-<hr/>
-  <h2>About me</h2>
-  <p>I am YongH. I am a very imaginative person.</p>
-  <p>I day dream and night dream</p>
+  <header>
+	<div class="container">
+    <div class="logo-section">
+      <img src="PHOTO-2025-07-08-23-21-31.jpg" width="150" height="200" alt="Light Up Futures Logo">
+    </div>
+    <div class="company-name">
+	  <h1>Light Up Futures</h1>
+    </div>
+  </div>
 
-  <h2>My School</h2>
-  <p>I currently study in <a href="https://mynypportal.nyp.edu.sg" target="_blank">Nanyang Polytechnic  </a> </p> <p>There are 6 total modules i have in school</p>
-<ol>
-   <li>English</li>
-  <li>Math</li>
-  <li>Science</li>
-  <li>History</li>
-  <li>Geography</li>
-  <li>Art</li>
-</ol>
-  <p>I am learning how to make a website</p>
-  <p>My favorite website is <a href="https://mynypportal.nyp.edu.sg" target="_blank">MY FAVOURITE WEBSITE </a></p>
-<p>2025 copyright &copy;</p>
-dy>
+	<nav class="navbar">
+        <a href="index.html">Home</a>
+        <a href="about.html">About Us</a>
+        <a href="products.html">Our Products</a>
+        <a href="feedback.html">Feedback</a>
+        <a href="contact.html">Contact Us</a>
+        <a href="donations.html">Donations</a>
+    </nav>
+    </div>
+  </header>
+
+  <section class="hero">
+    <div class="hero-content">
+      <p>Are you ready to explore the next generation of solar lighting solutions?</p>
+      <a href="products.html" class="cta-button">Explore!</a>
+    </div>
+  </section>
+
+  <section class="about-us-section">
+    <h2>About Light Up Futures</h2>
+    <p>
+      At Light Up Futures, we believe in illuminating lives and empowering communities through sustainable energy solutions. We are dedicated to providing affordable, reliable solar-powered lighting kits to families and businesses in underserved regions, helping them overcome the challenges of darkness and build brighter futures. Our mission is to foster education, improve health, and stimulate economic growth, one light at a time.
+    </p>
+   <a href="about.html#team" class="cta-button">Want to find out more about our founder Brandon Lean? Click here to find out more!</a>
+  </section>
+
+  <!-- New Content Grid for About Us details -->
+  <div class="content-grid">
+    <div class="content-card">
+      <img src="https://lawschoolpolicyreview.com/wp-content/uploads/2024/04/image_2024-04-02_120352844.png" alt="Our Founder">
+      <h3>Our Founder</h3>
+      <p>Learn about the visionary behind Light Up Futures and their journey to illuminate lives worldwide.</p>
+      <a href="about.html" class="cta-button">Learn More</a>
+    </div>
+
+    <div class="content-card">
+      <img src="https://lawschoolpolicyreview.com/wp-content/uploads/2024/04/image_2024-04-02_120352844.png" alt="Our Locations">
+      <h3>Our Locations</h3>
+      <p>Discover where Light Up Futures is making an impact and explore our global presence.</p>
+      <a href="#" class="cta-button">View Map</a>
+    </div>
+  </div>
+  <!-- End New Content Grid -->
+
+  <section id="lightup-preview" class="lightup-preview">
+    <div>
+      <h2>Our Impact</h2>
+      <p>Light Up Futures is dedicated to creating a brighter future for all. See how we're making a difference.</p>
+      <div class="features-grid">
+        <div class="feature-item">
+          <span>💡</span> <span>Providing sustainable lighting solutions.</span>
+        </div>
+        <div class="feature-item">
+          <span>🌍</span> <span>Empowering communities globally.</span>
+        </div>
+        <div class="feature-item">
+          <span>📚</span> <span>Fostering education and literacy.</span>
+        </div>
+        <div class="feature-item">
+          <span>💰</span> <span>Stimulating economic growth.</span>
+        </div>
+      </div>
+      <div class="impact-stats">
+        <div class="impact-stat">
+          <strong>150+</strong>
+          <p>Villages Illuminated</p>
+        </div>
+        <div class="impact-stat">
+          <strong>5000+</strong>
+          <p>Lives Touched</p>
+        </div>
+        <div class="impact-stat">
+          <strong>100%</strong>
+          <p>Sustainable Energy</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="content-grid">
+    <div class="content-card"> <img src="https://lawschoolpolicyreview.com/wp-content/uploads/2024/04/image_2024-04-02_120352844.png" alt="Supporting foreign countries">
+      <h3>Global Impact Initiative</h3>
+      <p>Currently we are helping out in foreign countries, bringing light to communities that need it most!</p>
+      <a href="#" class="cta-button">Please Support Us!</a>
+    </div>
+
+    <div class="content-card"> <img src="https://lawschoolpolicyreview.com/wp-content/uploads/2024/04/image_2024-04-02_120352844.png" alt="Solar panel promotion">
+      <h3>Special Promotion</h3>
+      <p>We are having a buy 1 get 1 free promotion for all solar panels - double your impact!</p>
+      <a href="#" class="cta-button">Click here to find out more!</a>
+    </div>
+  </div>
+
+  <div class="bottom-sections">
+    <div class="bottom-box"> <span>🗺️ Interactive Map</span>
+      <p style="font-size: 1rem; margin-top: 15px; opacity: 0.8;">Explore our global impact</p>
+    </div>
+    <div class="bottom-box"> <span>🏢 Our Office</span>
+      <p style="font-size: 1rem; margin-top: 15px; opacity: 0.8;">Visit us or get in touch</p>
+    </div>
+  </div>
+
+  <footer>
+    <p>Darkness Shall Be Devoured.</p>
+  </footer>
+
 </body>
-
 </html>

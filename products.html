@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Product Catalog - Light Up Futures</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <header>
+	<div class="container">
+    <div class="logo-section">
+      <img src="PHOTO-2025-07-08-23-21-31.jpg" width="150" height="200" alt="Light Up Futures Logo">
+    </div>
+    <div class="company-name">
+      <h1>Light Up Futures</h1>
+    </div>
+  </div>
+  
+    <nav class="navbar">
+        <a href="index.html">Home</a>
+        <a href="about.html">About Us</a>
+        <a href="products.html">Our Products</a>
+        <a href="feedback.html">Feedback</a>
+        <a href="contact.html">Contact Us</a>
+        <a href="donations.html">Donations</a>
+     </nav>
+    </div>
+  </header>
+  
+    <button class="catalog-button" onclick="toggleCatalog()">📋 Catalog</button>
+
+    <div class="catalog-dropdown" id="catalogDropdown">
+        <h3>Categories</h3>
+        <ul>
+            <li onclick="filterProducts('solar-panels')">Solar Panels</li>
+            <li onclick="filterProducts('light-kits')">Light It Up! Kits</li>
+            <li onclick="filterProducts('all')">Show All</li>
+        </ul>
+    </div>
+  
+    <main>
+        <div class="product-grid">
+            <div class="product-card" data-category="solar-panels">
+                <div class="product-image">
+                    <img src="solar-panels.jpg" alt="Solar Panels">
+					                    <div class="badge popular">Most Popular</div>
+                </div>
+                <div class="product-info">
+                    <h3>300W Monocrystalline Solar Panel</h3>
+                    <p>300W Output • 24V System • 25 Year Warranty - Though tiny, it is surely mighty! Our solar panels
+                        promise to light up homes and save our planet.</p>
+                    <div class="rating-price-container">
+                        <div class="rating">
+                            <span class="stars">★★★★☆</span>
+                            <span class="review-count">4.3 (57 reviews)</span>
+                        </div>
+                        <div class="price">SGD 389</div>
+                    </div>
+                </div>
+            </div>
+            <div class="product-card" data-category="light-kits">
+                <div class="product-image">
+                    <img src="light-kits.jpg" alt="Light Bulb Parts">
+                   
+                </div>
+                <div class="product-info">
+                    <h3>Solar Panels (Individual Parts)</h3>
+                    <p>LED Strip • 12V Battery • Portable - Need a replacement of parts? We got you covered! At the
+                        lowest prices in the market, you can get all the parts you need on a budget.</p>
+                    <div class="rating-price-container">
+                        <div class="rating">
+                            <span class="stars">★★★★★</span>
+                            <span class="review-count">4.7 (89 reviews)</span>
+                        </div>
+                        <div class="price">SGD 15.00 - SGD 199.99</div>
+                    </div>
+                </div>
+            </div>
+            <div class="product-card" data-category="light-kits">
+                <div class="product-image">
+                    <img src="lighter-kits.jpg" alt="Solar Kit">
+                    <div class="badge discount">30% off</div>
+                </div>
+                <div class="product-info">
+                    <h3>Light It Up! Kits</h3>
+                    <p>Motion Sensor • Weather Resistant • At Light Up Futures, we promise to bring you the best and
+                        most affordable kits to those in need. Our kits are able to last up to 3 months with 2
+                        batteries.</p>
+                    <div class="rating-price-container">
+                        <div class="rating">
+                            <span class="stars">★★★★☆</span>
+                            <span class="review-count">4.4 (203 reviews)</span>
+                        </div>
+                        <div class="price">
+                            <span class="current-price">SGD 50.00</span>
+                            <span class="original-price">SGD 374.00</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script>
+        function toggleCatalog() {
+            const dropdown = document.getElementById('catalogDropdown');
+            dropdown.classList.toggle('active');
+        }
+
+        function filterProducts(category) {
+            const products = document.querySelectorAll('.product-card');
+
+            products.forEach(product => {
+                if (category === 'all' || product.dataset.category === category) {
+                    product.style.display = 'block';
+                } else {
+                    product.style.display = 'none';
+                }
+            });
+
+            // Close dropdown after selection
+            document.getElementById('catalogDropdown').classList.remove('active');
+        }
+
+        // Close dropdown when clicking outside
+        document.addEventListener('click', function(event) {
+            const dropdown = document.getElementById('catalogDropdown');
+            const button = document.querySelector('.catalog-button');
+
+            if (!dropdown.contains(event.target) && !button.contains(event.target)) {
+                dropdown.classList.remove('active');
+            }
+        });
+    </script>
+</body>
+
+</html>

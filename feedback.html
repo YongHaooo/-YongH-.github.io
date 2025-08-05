@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Feedback Form - Light Up Futures</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <header>
+	<div class="container">
+    <div class="logo-section">
+      <img src="PHOTO-2025-07-08-23-21-31.jpg" width="150" height="200" alt="Light Up Futures Logo">
+    </div>
+    <div class="company-name">
+      <h1>Light Up Futures</h1>
+    </div>
+  </div>
+  
+    <nav class="navbar">
+        <a href="index.html">Home</a>
+        <a href="about.html">About Us</a>
+        <a href="products.html">Our Products</a>
+        <a href="feedback.html">Feedback</a>
+        <a href="contact.html">Contact Us</a>
+        <a href="donations.html">Donations</a>
+     </nav>
+    </div>
+  </header>
+  
+  <main>
+    <div class="form-container">
+      <h2 class="form-title">💡 Share Your Feedback</h2>
+      
+      <div class="success-message" id="successMessage">
+        Thank you for your feedback! We appreciate your input.
+      </div>
+      
+      <form id="feedbackForm">
+        <label for="name">Your Name:</label>
+        <input type="text" id="name" name="name" placeholder="Enter your full name..." required>
+        
+        <label for="email">Email Address:</label>
+        <input type="text" id="email" name="email" placeholder="Enter your email address..." required>
+        
+        <label for="satisfaction">Satisfaction Level:</label>
+        <div class="star-rating">
+          <span class="star" data-rating="1">★</span>
+          <span class="star" data-rating="2">★</span>
+          <span class="star" data-rating="3">★</span>
+          <span class="star" data-rating="4">★</span>
+          <span class="star" data-rating="5">★</span>
+        </div>
+        
+        <label for="category">Feedback Category:</label>
+        <select id="category" name="category" style="width: 100%; margin-bottom: 20px; padding: 12px 15px; border: 2px solid #333; border-radius: 8px; background-color: #0a0a0a; color: #ffffff; font-family: Arial, sans-serif; font-size: 1rem;">
+          <option value="">Select a category...</option>
+          <option value="product">Product Quality</option>
+          <option value="service">Customer Service</option>
+          <option value="website">Website Experience</option>
+          <option value="general">General Feedback</option>
+        </select>
+        
+        <label for="remarks">Your Comments:</label>
+        <textarea id="remarks" name="remarks" rows="5" placeholder="Share your thoughts, suggestions, or experiences with us..."></textarea>
+        
+        <div class="button-container">
+          <button type="submit">🚀 Submit Feedback</button>
+          <button type="reset">🔄 Clear Form</button>
+        </div>
+      </form>
+    </div>
+  </main>
+
+  <!-- Script -->
+  <script>
+    // Star rating functionality
+    const stars = document.querySelectorAll(".star");
+    let currentRating = 0;
+
+    stars.forEach((star, index) => {
+      star.addEventListener("click", () => {
+        currentRating = index + 1;
+        updateStars();
+      });
+      
+      star.addEventListener("mouseover", () => {
+        highlightStars(index + 1);
+      });
+    });
+
+    document.querySelector(".star-rating").addEventListener("mouseleave", () => {
+      updateStars();
+    });
+
+    function updateStars() {
+      stars.forEach((star, index) => {
+        if (index < currentRating) {
+          star.classList.add("active");
+        } else {
+          star.classList.remove("active");
+        }
+      });
+    }
+
+    function highlightStars(rating) {
+      stars.forEach((star, index) => {
+        if (index < rating) {
+          star.classList.add("active");
+        } else {
+          star.classList.remove("active");
+        }
+      });
+    }
+
+    // Form submission
+    document.getElementById('feedbackForm').addEventListener('submit', function(e) {
+      e.preventDefault();
+      
+      const name = document.getElementById('name').value;
+      const email = document.getElementById('email').value;
+      const category = document.getElementById('category').value;
+      const remarks = document.getElementById('remarks').value;
+      
+      if (name && email && currentRating > 0) {
+        // Show success message
+        document.getElementById('successMessage').style.display = 'block';
+        
+        // Scroll to top to show success message
+        window.scrollTo({
+          top: 0,
+          behavior: 'smooth'
+        });
+        
+        // Clear form after delay
+        setTimeout(() => {
+          document.getElementById('feedbackForm').reset();
+          currentRating = 0;
+          updateStars();
+          document.getElementById('successMessage').style.display = 'none';
+        }, 3000);
+        
+      } else {
+        alert('Please fill in your name, email, and select a star rating. ⭐');
+      }
+    });
+
+    // Clear form functionality
+    document.querySelector('button[type="reset"]').addEventListener('click', function() {
+      currentRating = 0;
+      updateStars();
+      document.getElementById('successMessage').style.display = 'none';
+    });
+  </script>
+</body>
+</html>
