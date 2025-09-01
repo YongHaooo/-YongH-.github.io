@@ -28,7 +28,7 @@ I am passionate about learning programming, problem-solving, and building useful
 ---
 
 ## Connect With Me
-- LinkedIn: [Your LinkedIn link here]  
+- LinkedIn: www.linkedin.com/in/yong-h-229087237 
 
 ---
 
